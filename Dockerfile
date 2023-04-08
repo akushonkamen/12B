@@ -1,3 +1,3 @@
-FROM ghcr.io/akushonkamen/WeChatGPT:latest
+FROM ghcr.io/akushonkamen/wechatgpt:latest
 
 ENTRYPOINT ["/entrypoint.sh"]
