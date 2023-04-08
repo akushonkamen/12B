@@ -20,7 +20,7 @@
       "denoising_strength": 0.7
     },
     "options": {
-      "sd_model_checkpoint": "perfectWorld_v2Baked"
+      "sd_model_checkpoint": "chilloutmix_NiPrunedFp32Fix"
     }
   },
   "rules": [
