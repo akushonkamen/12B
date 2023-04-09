@@ -2,7 +2,7 @@
   "start":{
     "host" : "61.139.65.134",
     "port" : 45329,
-    "use_https" : false
+    "use_https" : true
   },
   "defaults": {
     "params": {
