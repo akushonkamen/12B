@@ -82,7 +82,7 @@ class SDWebUI(Plugin):
                 print(params)
                 if len(options) > 0:
                     logger.info("[SD] cover options={}".format(options))
-                     print(7)
+                    print(7)
                     self.api.set_options(options)
                 print(8)
                 logger.info("[SD] params={}".format(params))
