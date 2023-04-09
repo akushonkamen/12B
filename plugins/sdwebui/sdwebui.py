@@ -56,15 +56,16 @@ class SDWebUI(Plugin):
             else:
                 keywords = content
                 prompt = ""
-
+            print(1)
             keywords = keywords.split()
-
+            print(2)
             if "help" in keywords or "帮助" in keywords:
                 reply.type = ReplyType.INFO
                 reply.content = self.get_help_text(verbose = True)
             else:
                 rule_params = {}
                 rule_options = {}
+                print(3)
                 for keyword in keywords:
                     matched = False
                     for rule in self.rules:
@@ -76,12 +77,14 @@ class SDWebUI(Plugin):
                                     rule_options[key] = rule["options"][key]
                             matched = True
                             break  # 一个关键词只匹配一个规则
+                    print(4)
                     if not matched:
                         logger.warning("[SD] keyword not matched: %s" % keyword)
-                
+                print(5)
                 params = {**self.default_params, **rule_params}
                 options = {**self.default_options, **rule_options}
                 params["prompt"] = params.get("prompt", "")+f", {prompt}"
+                print(16)
                 if len(options) > 0:
                     logger.info("[SD] cover options={}".format(options))
                     self.api.set_options(options)
