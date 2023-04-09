@@ -79,20 +79,16 @@ class SDWebUI(Plugin):
                 params = {**self.default_params, **rule_params}
                 options = {**self.default_options, **rule_options}
                 params["prompt"] = params.get("prompt", "")+f", {prompt}"
-                print(params)
                 if len(options) > 0:
                     logger.info("[SD] cover options={}".format(options))
-                    print(7)
+                    print(options)
                     self.api.set_options(options)
-                print(8)
+                    print(1)
                 logger.info("[SD] params={}".format(params))
-                print(12)
                 result = self.api.txt2img(
                     **params
                 )
-                print(9)
                 reply.type = ReplyType.IMAGE
-                print(10)
                 b_img = io.BytesIO()
                 result.image.save(b_img, format="PNG")
                 reply.content = b_img
