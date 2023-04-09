@@ -1,6 +1,6 @@
 {
   "start":{
-    "host" : "61.139.65.134",
+    "host" : "frp-any.top",
     "port" : 45329,
     "use_https" : true
   },
