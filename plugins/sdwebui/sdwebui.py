@@ -80,8 +80,9 @@ class SDWebUI(Plugin):
                 options = {**self.default_options, **rule_options}
                 params["prompt"] = params.get("prompt", "")+f", {prompt}"
                 if len(options) > 0:
+                    print(1,options)
                     logger.info("[SD] cover options={}".format(options))
-                    print(options)
+                    print(2,options)
                     self.api.set_options(options)
                     print(1)
                 logger.info("[SD] params={}".format(params))
