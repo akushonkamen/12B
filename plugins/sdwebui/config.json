@@ -20,7 +20,7 @@
       "denoising_strength": 0.7
     },
     "options": {
-      "sd_model_checkpoint": "chilloutmix_NiPrunedFp32Fix"
+      "sd_model_checkpoint": "chilloutmix_NiPrunedFp32Fix.safetensors"
     }
   },
   "rules": [
